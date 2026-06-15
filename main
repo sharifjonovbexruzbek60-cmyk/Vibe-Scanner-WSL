@@ -1,4 +1,4 @@
-Daho Vision is a custom-built cybersecurity toolset designed for network mapping, port discovery, and security auditing. Developed within an Ubuntu WSL environment, this project reflects a "Green Hat" approach to learning penetration testing and network reconnaissance.
+S Vision is a custom-built cybersecurity toolset designed for network mapping, port discovery, and security auditing. Developed within an Ubuntu WSL environment, this project reflects a "Green Hat" approach to learning penetration testing and network reconnaissance.
 
 ##  Features
 
@@ -32,6 +32,6 @@ sudo python3 network_mapper.py
 All scans conducted on 172.30.112.1 and public domains like google.com showed high-security configurations. This tool is for educational purposes only.
 
  Author
-Behruzbek (init0) - Vibecoder & Cybersecurity Enthusiast
+Behruzbek Cybersecurity Enthusiast
 
 Focus: Linux, Pentesting, and Solo Performance.
