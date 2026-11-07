@@ -1,31 +1,24 @@
 # Vibe Scanner WSL
 
-> A defensive network-discovery and TCP port-scanning toolkit for authorized lab environments on Ubuntu WSL.
+A learning-focused network discovery and TCP port-scanning toolkit for authorized lab environments, developed with Ubuntu on WSL in mind.
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Platform](https://img.shields.io/badge/platform-Ubuntu%20WSL-E95420?logo=ubuntu&logoColor=white)](https://learn.microsoft.com/windows/wsl/)
-[![Authorized use](https://img.shields.io/badge/use-authorized%20labs-2F6FEB)](#-responsible-use)
-
-## Overview
-
-Vibe Scanner WSL is a learning-focused security toolkit for understanding host discovery, TCP ports, DNS resolution, timeouts, and audit logging in a controlled environment.
+The project helps me practice networking concepts such as host discovery, DNS resolution, TCP ports, timeouts, and recording results in a controlled environment.
 
 ## Features
 
-- TCP port discovery with configurable timeouts.
-- Local-network discovery using ARP/Scapy where WSL supports it.
-- DNS-resolution error handling.
-- Scan-result logging for repeatable lab analysis.
-- Ubuntu WSL-oriented workflow.
+- TCP port discovery with configurable timeouts
+- Local-network discovery using ARP/Scapy where supported by WSL
+- DNS-resolution error handling
+- Logging to support repeatable lab analysis
 
 ## Requirements
 
 - Ubuntu on WSL
-- Python 3.10+
-- `scapy` and `colorama` for the corresponding modules
-- Administrator privileges only when required by local ARP discovery
+- Python 3.10 or later
+- `scapy` and `colorama` for the modules that use them
+- Elevated privileges only when required for local ARP discovery
 
-## Usage
+## Getting started
 
 ```bash
 python3 -m venv .venv
@@ -34,29 +27,18 @@ pip install -r requirements.txt
 python3 daho_scanner.py
 ```
 
-For local ARP discovery:
+For local ARP discovery, if supported by your WSL networking configuration:
 
 ```bash
 sudo .venv/bin/python network_mapper.py
 ```
 
-If your checkout uses different entry-point names, run the Python file documented in the source tree.
-
-## WSL notes
-
-ARP discovery can be limited by the WSL networking mode. Prefer testing inside a private lab subnet and keep generated logs out of version control.
+Check the source tree for the available entry points and requirements. WSL networking modes may limit ARP discovery; use a private lab network and avoid committing generated logs.
 
 ## Responsible use
 
-Use this project only against `localhost`, your own lab, or systems for which you have explicit written authorization. Do not scan public infrastructure, evade controls, or disrupt services.
+Use this project only on `localhost`, your own lab, or systems for which you have explicit authorization. Do not scan public infrastructure or use the tool to evade controls or disrupt services.
 
-## Roadmap
+## About
 
-- Add automated tests for parsing and reporting.
-- Add bounded concurrency with safe defaults.
-- Add JSON/CSV export.
-- Add clearer CLI arguments and validation.
-
-## Author
-
-Behruzbek Sharifjonov — cybersecurity learner and responsible security researcher.
+Built by Behruzbek Sharifjonov as part of my ongoing learning in Python, networking, and responsible cybersecurity.
