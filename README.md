@@ -1,44 +1,28 @@
 # Vibe Scanner WSL
 
-A learning-focused network discovery and TCP port-scanning toolkit for authorized lab environments, developed with Ubuntu on WSL in mind.
+A small networking and security-learning project developed with Ubuntu on Windows Subsystem for Linux (WSL). The project documents practice with host discovery, DNS resolution, TCP ports, timeouts, and recording observations in a controlled lab.
 
-The project helps me practice networking concepts such as host discovery, DNS resolution, TCP ports, timeouts, and recording results in a controlled environment.
+## Project status
 
-## Features
+This repository is a learning project and may change as I develop it. Review the current source tree before running anything; documentation may describe planned or experimental components that are not yet included.
 
-- TCP port discovery with configurable timeouts
-- Local-network discovery using ARP/Scapy where supported by WSL
-- DNS-resolution error handling
-- Logging to support repeatable lab analysis
-
-## Requirements
+## Environment
 
 - Ubuntu on WSL
-- Python 3.10 or later
-- `scapy` and `colorama` for the modules that use them
-- Elevated privileges only when required for local ARP discovery
+- Python 3.10 or later for Python components
+- Scapy and Colorama where required by a component
 
-## Getting started
+## Learning goals
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python3 daho_scanner.py
-```
+- Understand basic network discovery and TCP behavior
+- Practice handling DNS and connection errors
+- Keep test results organized without recording sensitive information
+- Improve technical documentation and safe testing habits
 
-For local ARP discovery, if supported by your WSL networking configuration:
+## Safe use
 
-```bash
-sudo .venv/bin/python network_mapper.py
-```
-
-Check the source tree for the available entry points and requirements. WSL networking modes may limit ARP discovery; use a private lab network and avoid committing generated logs.
-
-## Responsible use
-
-Use this project only on `localhost`, your own lab, or systems for which you have explicit authorization. Do not scan public infrastructure or use the tool to evade controls or disrupt services.
+Use only on `localhost`, a private lab you control, or systems for which you have explicit written authorization. Keep testing within the agreed scope and rate limits. Do not use this project to evade controls, disrupt services, or scan public systems without permission.
 
 ## About
 
-Built by Behruzbek Sharifjonov as part of my ongoing learning in Python, networking, and responsible cybersecurity.
+Maintained by Behruzbek Sharifjonov as a cybersecurity and Python learning project.
